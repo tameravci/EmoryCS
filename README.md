@@ -15,7 +15,7 @@ CS540: [ClassScheduler (software engineering project with a team - MEAN stack)] 
 CS551: [All the projects -UNIX] (https://github.com/tameravci/EmoryCS/tree/master/Systems%20Programming%20UNIX%20-%20CS551)
 
 ###Notes:
-Most of the code here is my own and using it without giving credit would be an honor code violation.
+Most of the code here (those with a statement at the top) is my own and using it without giving credit would be an honor code violation.
 
 Some code lacks documentation.
 
