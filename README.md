@@ -23,7 +23,7 @@ CS551:
 - Most of the code here (those with a statement at the top) is my own and using it without giving credit would be an honor code violation.
 - Some code lacks documentation.
 - Feel free to point out my mistakes and suggest improvements.
-- 98% of these assignments received perfect grades. 
+- Around 98% of these assignments received perfect grades. 
 
 
 
