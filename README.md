@@ -1,6 +1,5 @@
-#Bachelor of Science in Computer Science
-##Emory University
-##2013-2016
+##Bachelor of Science in Computer Science
+###Emory University 2013-2016
 
 ###Here you can find all the projects and assignments that I worked on during my undergraduate at Emory University. I also took two graduate level courses.
 
