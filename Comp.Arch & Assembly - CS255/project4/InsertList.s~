@@ -1,0 +1,106 @@
+* Collaboration Statement:
+* TAMER AVCI #2105024 I worked on this assignment alone, using only this semester's course materials.
+
+
+	xdef InsertList
+	xdef If
+	xdef Elseif
+	xdef Else
+
+InsertList:
+
+* ********************************************************************
+* Put your InsertList function here 
+* Remember, you must have a RECURSIVE implementation
+* Iterative solutions will receive little/no credit
+* ********************************************************************
+
+
+
+
+
+****************************************************************
+* JAVA ALGORITHM - TAMER AVCI #2105024
+*   public static Node InsertList(Node h, Node e) {
+*	if ( h == null ) { 
+*		e.next = null;
+*		return e;
+*	}
+*
+*	else if ( h.value < e.value ) {
+*		e.next = h;
+*		return e;
+*	}
+*	
+*	else	{
+*		Node bridge = new Node();
+*		bridge = InsertList(h.next,e);
+*		h.next = bridge;
+*		return h;
+*	}
+*********************************************
+	
+
+
+Start:
+	move.l A6, -(A7)	*save caller's frame pointer A6
+	move.l A7, A6		*setup frame pointer
+	sub.l #4, A7		*create local variable node bridge
+
+
+	move.l 12(A6), D0	*moving h to D0
+	cmp.l #0, D0		*check if h==null
+	beq If			*if true go to if part
+
+	move.l 12(A6), A0	*move the address of h to a0
+	move.l 8(A6), A1	*move the address of e to a1
+	move.l (A0), D0		*put h.value to d0
+	move.l (A1), D1		*put e.value to d1
+	cmp.l D0, D1		*compare values
+	bge Elseif		*if e.value greater or equal to h.value go to elseif part
+	bra Else		*otherwise go to else part
+
+If:
+	move.l 8(A6), A0	*move the address of e to a0
+	move.l #0, 4(A0)	*put null to e.next
+	move.l 8(A6), D0	*return e
+	move.l A6, A7     	*deallocate local variables
+	move.l (A7)+, A6  	*restore frame pointer
+	rts                	*return
+
+Elseif:
+	move.l 8(A6), A0	*put the address of e to a0
+	move.l 12(A6), A1	*put the address of h to a1
+	move.l A1, 4(A0)	*move h to e.next
+	move.l 8(A6), D0	*return e
+	move.l A6, A7     	*deallocate local variables
+	move.l (A7)+, A6  	*restore frame pointer
+	rts                	*return
+
+Else:
+	move.l 12(A6), A0	*move the address of h to a0
+	move.l 4(A0), -(A7)	*put h.next on top of the stack
+	move.l 8(A6), A1	*put the address of e to a1
+	move.l A1, -(A7)	*put e on top of the stack
+	bsr InsertList		*recurse
+
+	adda.l #8, A7		*get rid of input parameters on the stack
+	move.l D0, -4(A6)	*put the recursive result back to the local variable bridge
+	move.l 12(A6), A0	*put h to A0
+	move.l -4(A6), 4(A0)	*move bridge to h.next
+	move.l 12(A6), D0	*return h
+	move.l A6, A7     	*deallocate local variables
+	move.l (A7)+, A6  	*restore frame pointer
+	rts
+
+
+
+
+
+
+
+
+
+
+
+        end

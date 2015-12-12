@@ -1,0 +1,253 @@
+* Collaboration Statement:
+* "I worked on this assignment alone, using only this semester's course materials." 
+* 
+*
+
+* ********************************************************************
+* Do not touch the following 2 xdef lists:
+* ********************************************************************
+        xdef Start, Stop, End
+        xdef a, b, len_a, len_b, min, max, sum, common, i
+
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* You can add more xdef here to export labels to EGTAPI
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*      Put your assembler program here - between the start and stop label
+*      DO NOT define any variables here - see the variable section below
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Start:
+
+
+	move.l a, max
+	move.l a, min
+	move.l a, sum
+	move.l #0, common
+	move.l #1, i
+
+	move.l a, D0
+	
+	bsr CEFind
+* *******************************************************************
+* ^^^initializes max, min, and sum as the element at a[0]
+* common is set to 0
+* sets i = 1
+* CEFind to common element finder. This initial one is so the first element 
+* is included in the array, since it is not a part of the main loop
+* *******************************************************************
+
+AStart:
+	move.l #0, j
+	move.l (sum), D6
+	move.l i, D0
+	move.l #len_a, D5
+	cmp.l D5, D0
+	bge BPreStart
+
+* *******************************************************************
+* ^^^ sets j to 0, which is used for the CEFind 
+* sends sum to D6 to make sure it has a free data register
+* compares i to the array size and then compares to see whether it 
+* should continue or move to Array b
+* *******************************************************************
+	
+	move.l #a, A0
+	move.l i, D0
+	muls #4, D0
+	move.l 0(A0, D0.w), D0
+	add.l D0, D6
+	move.l D6, sum
+
+	bsr CEFind
+	
+
+* ********************************************************************
+* ^^^ for the loop: the first element of the array is sent to register A0
+* i is moved to D0 and then set up for array incrementation
+* a[i] is added to the sum. Compares a[i] to elements in b
+* ********************************************************************
+
+	move.l max, D1
+
+	cmp.l D1, D0
+ 	ble MinA
+	move.l D0, max
+
+	bra IncA
+
+*
+
+* ********************************************************************
+* ^^^ If max is greater than a[i], skip it in the array
+* and test it for min. Otherwise, set max as a[i]
+* ********************************************************************
+
+
+MinA:
+	move.l min, D2
+
+	cmp.l D2, D0
+	bge IncA
+	move.l D0, min
+
+
+* ********************************************************************
+* ^^^ If min is less than a[i], skip it in the array, and increment i
+* otherwise set min as a[i]
+* ********************************************************************
+
+IncA:
+	move.l i, D0
+	add.l #1, D0
+	move.l D0, i
+
+	bra AStart
+
+* ********************************************************************
+* ^^^increments i
+* ********************************************************************
+
+BPreStart:
+
+	move.l #0, i
+
+* ********************************************************************
+* ^^^ BPreStart reinitalizes i to 0, for b[0]
+* Program contniues the same way as it did for A
+* ********************************************************************
+
+BStart:
+	move.l (sum), D6
+	move.l i, D0
+	move.l #len_b, D5
+	cmp.l D5, D0
+	bge TempHold
+
+* ********************************************************************
+* ^^^ Same as the comparison in the loop for array a. 
+* if i exceeds the size of the array, then it goes to temphold
+* where variables can be reviewed
+* ********************************************************************
+
+	move.l #b, A0
+	move.l i, D0
+	muls #4, D0
+	move.l 0(A0, D0.w), D0
+
+	add.l D0, D6
+	move.l D6, sum
+
+	move.l max, D1
+
+	cmp.l D1, D0
+ 	ble MinB
+	move.l D0, max
+
+	bra IncB
+
+MinB: 	
+	move.l min, D2
+
+	cmp.l D2, D0
+	bge IncB
+	move.l D0, min
+
+IncB:
+	move.l i, D0
+	add.l #1, D0
+	move.l D0, i
+
+	bra BStart
+
+TempHold:
+	move.l #5000, D7
+
+
+CEFind:
+	cmp.l len_a, len_b
+	move.l #0, j
+	BGE Common
+
+
+Common:
+	move.l j, D3
+	move.l #len_b, D5
+	cmp.l D5, D3
+	bge Finish
+
+	move.l #b, A3
+	muls #4, D3
+	move.l 0(A3, D3), D3
+	move.l 0(A4, 
+	cmp.l D0, D3
+	beq ComCount
+	bra IncJ
+
+* ********************************************************************
+* ^^^ If an element in array b matches the element from array a
+* held in register D3, it branches to ComCount. Otherwise j is incremented
+* *******************************************************************
+
+
+ComCount:
+	move.l (common), D4
+	add.l #1, D4
+	move.l D4, common
+	bra IncJ
+	
+* ********************************************************************
+* ^^^ Keeps count of number of common elements
+* ********************************************************************
+
+IncJ:
+	move.l j, D3
+	add.l #1, D3
+	move.l D3, j
+
+	bra CEFind
+
+* ********************************************************************
+* ^^^ increments j
+* *******************************************************************
+
+Finish:
+	rts
+	
+
+
+
+
+* ********************************************************************
+* Don't touch the stop label - you need it to stop the program
+* ********************************************************************
+Stop:   nop
+
+
+End:    nop
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*    Variable Section -   Put your variables here
+*
+*    Do not define any of the variables specified in the program
+*    They are already defined below
+*    This section is for any temporary variables you might need
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+i:	ds.l 1
+j:	ds.l 1
+
+* ********************************************************************
+* XXXX Don't touch anything below this line !!!
+* ********************************************************************
+a:      dc.l  4, 5, 22, 2, 1
+b:      dc.l  1, 2, 9, 17, 11, 16, 10
+len_a: 	equ 5
+len_b:	equ 7
+min:	ds.l 1
+max:	ds.l 1
+sum:	ds.l 1
+common:	ds.l 1
+
+        end

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>hw3</title>
+<!-- 2015-02-25 Wed 22:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ben Dean" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">hw3</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Exercise 7</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Question 2</a></li>
+<li><a href="#sec-1-2">1.2. Question 3</a></li>
+<li><a href="#sec-1-3">1.3. Question 4</a></li>
+<li><a href="#sec-1-4">1.4. Question 5</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Exercise 7</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Set up the problem.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-julia">x = [1/21 * i <span style="color: #859900; font-weight: bold;">for</span> i=0:20]
+g = [<span style="color: #268bd2;">cos</span>(2 * pi * xi) <span style="color: #859900; font-weight: bold;">for</span> xi <span style="color: #859900; font-weight: bold;">in</span> x]
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Question 2</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+
+<pre class="src src-julia"><span style="color: #859900; font-weight: bold;">function</span> <span style="color: #268bd2;">vandermonde</span>(n)
+    <span style="color: #859900; font-weight: bold;">return</span> [x[row]^(n+1-col) <span style="color: #859900; font-weight: bold;">for</span> row = 1:21, col = 1:n+1]
+<span style="color: #859900; font-weight: bold;">end</span>
+
+<span style="color: #859900; font-weight: bold;">for</span> n = 2:5
+    A = <span style="color: #268bd2;">vandermonde</span>(n)
+    H = A' * A
+    eigenvalues = <span style="color: #268bd2;">eigvals</span>(H)
+    convex_message = <span style="color: #268bd2;">minimum</span>(eigenvalues) &gt; 0 ? <span style="color: #2aa198;">"IS strictly convex"</span> :
+                                                <span style="color: #2aa198;">"IS NOT strictly convex"</span>
+    <span style="color: #268bd2;">print</span> (<span style="color: #2aa198;">"""</span>
+
+<span style="color: #2aa198;">for n = $n, the eigenvalues are,</span>
+<span style="color: #2aa198;">$eigenvalues, so the objective function $convex_message</span>
+<span style="color: #2aa198;">"""</span>)
+<span style="color: #859900; font-weight: bold;">end</span>
+</pre>
+</div>
+
+As <i>n</i> increases, the smallest eigenvalue approaches 0. 
+
+<pre class="example">
+for n = 2, the eigenvalues are,
+.058721999581535136
+2.513796882657178
+28.651287042247482
+, so the objective function IS strictly convex
+
+for n = 3, the eigenvalues are,
+.00213831884287705
+.1404952658897972
+3.3836989654281506
+30.221264907348065
+, so the objective function IS strictly convex
+
+for n = 4, the eigenvalues are,
+7239098790859635e-20
+.006427958719556766
+.22978182748872406
+4.080481969553473
+31.29586233970504
+, so the objective function IS strictly convex
+
+for n = 5, the eigenvalues are,
+2322819801408405e-21
+.00026264696267439436
+.012430993294642504
+.31946415677363965
+4.650161709403046
+32.078970370848936
+, so the objective function IS strictly convex
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Question 3</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The objective function is strictly convex for all n. That means we
+just need to solve A<sup>T</sup> (Ac - g) = 0 to find coefficients that satisfy
+the optimality conditions.
+</p>
+
+<p>
+A<sup>T</sup> (Ac - g) = 0
+c = A<sup>T</sup> g / A<sup>T</sup> A
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-julia">coefficients = [<span style="color: #268bd2;">zeros</span>(i)' <span style="color: #859900; font-weight: bold;">for</span> i=0:10]
+<span style="color: #859900; font-weight: bold;">for</span> n = 2:5
+    A = <span style="color: #268bd2;">vandermonde</span>(n)
+    c =  (A' * g)' * <span style="color: #268bd2;">inv</span>(A' * A)
+    <span style="color: #268bd2;">print</span>( <span style="color: #2aa198;">"for n = $n, the optimal coefficients are $c"</span>)
+    coefficients[n] = c
+<span style="color: #859900; font-weight: bold;">end</span>
+</pre>
+</div>
+
+<pre class="example">
+for n = 2, the optimal coefficients are 9.085986525310144	-8.939684136659025	1.4412294260907244
+for n = 3, the optimal coefficients are 3.4848416185651128	4.107641355931426	-7.0890040752804815	1.312537510147594
+for n = 4, the optimal coefficients are -40.764134744133735	81.13081255976772	-42.704427859466044	2.280326723421234	.9643541335833471
+for n = 5, the optimal coefficients are -8.34258271045842	-20.90084257628726	64.49399165933984	-36.954132394358545	1.5670766919566959	.979435077058096
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Question 4</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Find the maximum absolute error and plot each n. Use the coefficients
+we save above to calculate the approximation for each n.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-julia"><span style="color: #859900; font-weight: bold;">function</span> <span style="color: #268bd2;">approximate_solution</span>(n, x)
+    c = coefficients[n]
+    <span style="color: #859900; font-weight: bold;">return</span> <span style="color: #268bd2;">sum</span>([c[n+1-i] * x^(i) <span style="color: #859900; font-weight: bold;">for</span> i=0:n])
+<span style="color: #859900; font-weight: bold;">end</span>
+
+<span style="color: #268bd2;">actual_solution</span>(x) = <span style="color: #268bd2;">cos</span>(2 * pi * x)
+space = <span style="color: #268bd2;">linspace</span>(0,1,200)
+actual_values = [<span style="color: #268bd2;">actual_solution</span>(p) <span style="color: #859900; font-weight: bold;">for</span> p <span style="color: #859900; font-weight: bold;">in</span> space]
+</pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre class="src src-julia"><span style="color: #859900; font-weight: bold;">using</span> Gadfly
+layers = Layer[<span style="color: #268bd2;">layer</span>(x=space, y=actual_values, Geom.line,
+                     <span style="color: #268bd2;">Theme</span>(default_color=<span style="color: #268bd2;">color</span>(<span style="color: #2aa198;">"red"</span>)))]
+<span style="color: #859900; font-weight: bold;">for</span> n = 2:5
+    estimates = [<span style="color: #268bd2;">approximate_solution</span>(n,p) <span style="color: #859900; font-weight: bold;">for</span> p <span style="color: #859900; font-weight: bold;">in</span> space]
+    <span style="color: #268bd2;">println</span> (<span style="color: #2aa198;">"For n = $n, the maximum absolute error is $(maximum(map(abs, estimates - actual_values)))"</span>)
+    push!(layers, <span style="color: #268bd2;">layer</span>(x=space, y=estimates, Geom.line,
+                        <span style="color: #268bd2;">Theme</span>(default_color=<span style="color: #268bd2;">color</span>(<span style="color: #2aa198;">"blue"</span>))))
+<span style="color: #859900; font-weight: bold;">end</span>
+
+<span style="color: #268bd2;">draw</span>(<span style="color: #268bd2;">SVG</span>(<span style="color: #2aa198;">"optimization_hw3_plot.jpg"</span>, 6inch, 3inch), <span style="color: #268bd2;">plot</span>(layers...))
+<span style="color: #586e75;">#</span><span style="color: #586e75;">plot(layers...)</span>
+</pre>
+</div>
+
+<pre class="example">
+For n = 2, the maximum absolute error is 0.5875318147418431
+For n = 3, the maximum absolute error is 0.8160164093636513
+For n = 4, the maximum absolute error is 0.09306918682747778
+For n = 5, the maximum absolute error is 0.1570542527495924
+</pre>
+
+
+<div class="figure">
+<p><img src="./optimization_hw3_plot.svg" alt="optimization_hw3_plot.svg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Question 5</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Our method seems to be robust enough, since the maximum absolute error
+does not change very much when we add some noise.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-julia">g = [<span style="color: #268bd2;">cos</span>(2 * pi * xi) + (<span style="color: #268bd2;">rand</span>() - 0.5) * 0.2 <span style="color: #859900; font-weight: bold;">for</span> xi <span style="color: #859900; font-weight: bold;">in</span> x]
+<span style="color: #859900; font-weight: bold;">for</span> n = 2:5
+    A = <span style="color: #268bd2;">vandermonde</span>(n)
+    coefficients[n] =  (A' * g)' * <span style="color: #268bd2;">inv</span>(A' * A)
+<span style="color: #859900; font-weight: bold;">end</span>
+
+<span style="color: #859900; font-weight: bold;">for</span> n = 2:5
+    estimates = [<span style="color: #268bd2;">approximate_solution</span>(n,p) <span style="color: #859900; font-weight: bold;">for</span> p <span style="color: #859900; font-weight: bold;">in</span> space]
+    <span style="color: #268bd2;">println</span> (<span style="color: #2aa198;">"For n = $n, the maximum absolute error is $(maximum(map(abs, estimates - actual_values)))"</span>)
+<span style="color: #859900; font-weight: bold;">end</span>
+</pre>
+</div>
+
+<pre class="example">
+For n = 2, the maximum absolute error is 0.63330368361623
+For n = 3, the maximum absolute error is 0.8934019708919156
+For n = 4, the maximum absolute error is 0.06869936213255201
+For n = 5, the maximum absolute error is 0.12288476386444813
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Total words = 2324
+Total lines = 330

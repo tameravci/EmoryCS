@@ -1,0 +1,453 @@
+Enter a command: Thread Number:1 is starting
+Enter a command: Thread Number:2 is starting
+Enter a command: Thread Number:3 is starting
+Enter a command: Thread Number:4 is starting
+Enter a command: Thread Number:5 is starting
+Enter a command: Thread Number:6 is starting
+Enter a command: Thread Number:7 is starting
+Enter a command: Thread Number:8 is starting
+Enter a command: Thread Number:9 is starting
+Enter a command: Thread Number:10 is starting
+Enter a command: Making the 1th thread idle
+Enter a command: Resuming the 1th thread 
+Enter a command: Waiting for 2 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 101, Number Skipped: 225000, Working on block: 9, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 239, Number Skipped: 125000, Working on block: 5, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 369, Number Skipped: 75000, Working on block: 3, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 264, Number Skipped: 100000, Working on block: 4, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 7287, Number Skipped: 0, Working on block: 0, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 147, Number Skipped: 175000, Working on block: 7, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 191, Number Skipped: 150000, Working on block: 6, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 107, Number Skipped: 200000, Working on block: 8, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 1177, Number Skipped: 25000, Working on block: 1, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 605, Number Skipped: 50000, Working on block: 2, RUNNING
+
+Perfect number found: 6 by Thread number:5 ID:140586923898624
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Enter a command: Thread Number:11 is starting
+Enter a command: Thread Number:12 is starting
+Enter a command: Thread Number:13 is starting
+Enter a command: Thread Number:14 is starting
+Enter a command: Thread Number:15 is starting
+Enter a command: Thread Number:16 is starting
+Enter a command: Thread Number:17 is starting
+Enter a command: Making the 7th thread idle
+Enter a command: Resuming the 7th thread 
+Enter a command: Making the 5th thread idle
+Enter a command: Resuming the 5th thread 
+Enter a command: Making the 4th thread idle
+Enter a command: Making the 3th thread idle
+Enter a command: Resuming the 4th thread 
+Enter a command: Resuming the 3th thread 
+Enter a command: Waiting for 2 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 197, Number Skipped: 225000, Working on block: 9, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 402, Number Skipped: 125000, Working on block: 5, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 684, Number Skipped: 75000, Working on block: 3, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 495, Number Skipped: 100000, Working on block: 4, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 9984, Number Skipped: 0, Working on block: 0, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 289, Number Skipped: 175000, Working on block: 7, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 343, Number Skipped: 150000, Working on block: 6, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 218, Number Skipped: 200000, Working on block: 8, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 2074, Number Skipped: 25000, Working on block: 1, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 1094, Number Skipped: 50000, Working on block: 2, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 83, Number Skipped: 250000, Working on block: 10, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 72, Number Skipped: 300000, Working on block: 12, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 64, Number Skipped: 325000, Working on block: 13, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 51, Number Skipped: 375000, Working on block: 15, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 55, Number Skipped: 400000, Working on block: 16, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 67, Number Skipped: 350000, Working on block: 14, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 83, Number Skipped: 275000, Working on block: 11, RUNNING
+
+Perfect number found: 6 by Thread number:5 ID:140586923898624
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: Thread Number:18 is starting
+Enter a command: Thread Number:19 is starting
+Enter a command: Thread Number:20 is starting
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 197, Number Skipped: 225000, Working on block: 9, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 402, Number Skipped: 125000, Working on block: 5, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 684, Number Skipped: 75000, Working on block: 3, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 495, Number Skipped: 100000, Working on block: 4, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 9984, Number Skipped: 0, Working on block: 0, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 289, Number Skipped: 175000, Working on block: 7, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 343, Number Skipped: 150000, Working on block: 6, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 218, Number Skipped: 200000, Working on block: 8, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 2074, Number Skipped: 25000, Working on block: 1, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 1094, Number Skipped: 50000, Working on block: 2, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 83, Number Skipped: 250000, Working on block: 10, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 72, Number Skipped: 300000, Working on block: 12, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 64, Number Skipped: 325000, Working on block: 13, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 51, Number Skipped: 375000, Working on block: 15, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 55, Number Skipped: 400000, Working on block: 16, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 67, Number Skipped: 350000, Working on block: 14, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 83, Number Skipped: 275000, Working on block: 11, RUNNING
+
+Thread Number: 18 ID: 140586787530496
+Number Tested: 0, Number Skipped: 0, Working on block: 0, RUNNING
+
+Thread Number: 19 ID: 140586777040640
+Number Tested: 0, Number Skipped: 0, Working on block: 0, RUNNING
+
+Thread Number: 20 ID: 140586766550784
+Number Tested: 0, Number Skipped: 0, Working on block: 0, RUNNING
+
+Perfect number found: 6 by Thread number:5 ID:140586923898624
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: Waiting for 1800 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 37871, Number Skipped: 700000, Working on block: 29, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 43353, Number Skipped: 600000, Working on block: 25, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 47244, Number Skipped: 550000, Working on block: 23, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 45512, Number Skipped: 575000, Working on block: 24, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 51935, Number Skipped: 950000, Working on block: 40, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 41189, Number Skipped: 650000, Working on block: 27, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 41997, Number Skipped: 625000, Working on block: 26, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 38911, Number Skipped: 675000, Working on block: 28, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 50988, Number Skipped: 975000, Working on block: 41, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 49488, Number Skipped: 525000, Working on block: 22, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 36452, Number Skipped: 725000, Working on block: 30, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 34159, Number Skipped: 775000, Working on block: 32, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 32909, Number Skipped: 800000, Working on block: 33, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 31338, Number Skipped: 850000, Working on block: 35, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 30679, Number Skipped: 875000, Working on block: 36, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 32087, Number Skipped: 825000, Working on block: 34, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 35408, Number Skipped: 750000, Working on block: 31, RUNNING
+
+Thread Number: 18 ID: 140586787530496
+Number Tested: 27841, Number Skipped: 950000, Working on block: 39, RUNNING
+
+Thread Number: 19 ID: 140586777040640
+Number Tested: 29704, Number Skipped: 900000, Working on block: 37, RUNNING
+
+Thread Number: 20 ID: 140586766550784
+Number Tested: 28697, Number Skipped: 925000, Working on block: 38, RUNNING
+
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: Waiting for 1800 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 53897, Number Skipped: 1175000, Working on block: 49, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 58452, Number Skipped: 1075000, Working on block: 45, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 61029, Number Skipped: 1025000, Working on block: 43, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 60033, Number Skipped: 1050000, Working on block: 44, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 65426, Number Skipped: 950000, Working on block: 40, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 56454, Number Skipped: 1125000, Working on block: 47, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 57197, Number Skipped: 1100000, Working on block: 46, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 53969, Number Skipped: 1150000, Working on block: 48, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 63383, Number Skipped: 975000, Working on block: 41, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 62609, Number Skipped: 1000000, Working on block: 42, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 51831, Number Skipped: 1200000, Working on block: 50, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 49731, Number Skipped: 775000, Working on block: 32, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 49131, Number Skipped: 800000, Working on block: 33, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 45729, Number Skipped: 850000, Working on block: 35, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 45591, Number Skipped: 875000, Working on block: 36, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 47834, Number Skipped: 825000, Working on block: 34, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 51589, Number Skipped: 1225000, Working on block: 51, RUNNING
+
+Thread Number: 18 ID: 140586787530496
+Number Tested: 41645, Number Skipped: 950000, Working on block: 39, RUNNING
+
+Thread Number: 19 ID: 140586777040640
+Number Tested: 43337, Number Skipped: 900000, Working on block: 37, RUNNING
+
+Thread Number: 20 ID: 140586766550784
+Number Tested: 41981, Number Skipped: 925000, Working on block: 38, RUNNING
+
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: Waiting for 1800 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 64202, Number Skipped: 1175000, Working on block: 49, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 69597, Number Skipped: 1075000, Working on block: 45, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 73012, Number Skipped: 1025000, Working on block: 43, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 71425, Number Skipped: 1050000, Working on block: 44, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 77315, Number Skipped: 1425000, Working on block: 60, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 66963, Number Skipped: 1125000, Working on block: 47, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 67908, Number Skipped: 1100000, Working on block: 46, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 64833, Number Skipped: 1150000, Working on block: 48, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 75295, Number Skipped: 1450000, Working on block: 61, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 74860, Number Skipped: 1000000, Working on block: 42, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 61814, Number Skipped: 1200000, Working on block: 50, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 59827, Number Skipped: 1250000, Working on block: 52, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 59271, Number Skipped: 1275000, Working on block: 53, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 56300, Number Skipped: 1325000, Working on block: 55, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 56419, Number Skipped: 1350000, Working on block: 56, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 58274, Number Skipped: 1300000, Working on block: 54, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 61219, Number Skipped: 1225000, Working on block: 51, RUNNING
+
+Thread Number: 18 ID: 140586787530496
+Number Tested: 53224, Number Skipped: 1425000, Working on block: 59, RUNNING
+
+Thread Number: 19 ID: 140586777040640
+Number Tested: 54386, Number Skipped: 1375000, Working on block: 57, RUNNING
+
+Thread Number: 20 ID: 140586766550784
+Number Tested: 53287, Number Skipped: 1400000, Working on block: 58, RUNNING
+
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: Waiting for 1800 seconds...
+Enter a command: 
+Thread Number: 1 ID: 140586965858048
+Number Tested: 74337, Number Skipped: 1175000, Working on block: 49, RUNNING
+
+Thread Number: 2 ID: 140586955368192
+Number Tested: 78899, Number Skipped: 1550000, Working on block: 65, RUNNING
+
+Thread Number: 3 ID: 140586944878336
+Number Tested: 81465, Number Skipped: 1500000, Working on block: 63, RUNNING
+
+Thread Number: 4 ID: 140586934388480
+Number Tested: 80241, Number Skipped: 1525000, Working on block: 64, RUNNING
+
+Thread Number: 5 ID: 140586923898624
+Number Tested: 85782, Number Skipped: 1425000, Working on block: 60, RUNNING
+
+Thread Number: 6 ID: 140586913408768
+Number Tested: 76613, Number Skipped: 1600000, Working on block: 67, RUNNING
+
+Thread Number: 7 ID: 140586902918912
+Number Tested: 77439, Number Skipped: 1575000, Working on block: 66, RUNNING
+
+Thread Number: 8 ID: 140586892429056
+Number Tested: 75334, Number Skipped: 1625000, Working on block: 68, RUNNING
+
+Thread Number: 9 ID: 140586881939200
+Number Tested: 83369, Number Skipped: 1450000, Working on block: 61, RUNNING
+
+Thread Number: 10 ID: 140586871449344
+Number Tested: 82867, Number Skipped: 1475000, Working on block: 62, RUNNING
+
+Thread Number: 11 ID: 140586860959488
+Number Tested: 71729, Number Skipped: 1200000, Working on block: 50, RUNNING
+
+Thread Number: 12 ID: 140586850469632
+Number Tested: 69411, Number Skipped: 1250000, Working on block: 52, RUNNING
+
+Thread Number: 13 ID: 140586839979776
+Number Tested: 68668, Number Skipped: 1275000, Working on block: 53, RUNNING
+
+Thread Number: 14 ID: 140586829489920
+Number Tested: 65372, Number Skipped: 1325000, Working on block: 55, RUNNING
+
+Thread Number: 15 ID: 140586819000064
+Number Tested: 65183, Number Skipped: 1350000, Working on block: 56, RUNNING
+
+Thread Number: 16 ID: 140586808510208
+Number Tested: 67618, Number Skipped: 1300000, Working on block: 54, RUNNING
+
+Thread Number: 17 ID: 140586798020352
+Number Tested: 70976, Number Skipped: 1225000, Working on block: 51, RUNNING
+
+Thread Number: 18 ID: 140586787530496
+Number Tested: 61944, Number Skipped: 1425000, Working on block: 59, RUNNING
+
+Thread Number: 19 ID: 140586777040640
+Number Tested: 63159, Number Skipped: 1375000, Working on block: 57, RUNNING
+
+Thread Number: 20 ID: 140586766550784
+Number Tested: 61764, Number Skipped: 1400000, Working on block: 58, RUNNING
+
+Perfect number found: 28 by Thread number:5 ID:140586923898624
+Perfect number found: 496 by Thread number:5 ID:140586923898624
+Perfect number found: 8128 by Thread number:5 ID:140586923898624
+Enter a command: 
+All numbers have been tested. Terminating process...
+PERFECT NUMS FOUND: 6 28 496 8128 
+Total number tested: 2500000
+Total cpu time used: 21524.85 seconds
+Total elapsed time: 22682 seconds

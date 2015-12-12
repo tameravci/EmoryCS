@@ -1,0 +1,37 @@
+# Debug variable section
+# ======================
+# Format:
+#   number-of-entries
+#   entry format:  varName  type  base
+# Type: 0=signed byte, 1=signed short, 2=signed int
+#       3=unsign byte, 4=unsign short, 5=unsign int
+# Base: 0=binary, 1=decimal, 2=hexadecimal
+#
+2
+n 2 1
+i 2 1
+# Breakpoint section
+# ======================
+# Format:
+#   number-of-entries
+#   entry format:  breakpoint-label   address(dec)
+#
+2
+Check
+Stop
+# Array section
+# ======================
+# Format:
+#   number-of-entries
+#   entry format:  ArrayName  type  size
+#
+0
+# List section
+# ======================
+# Format:
+#   number-of-entries
+#   entry format:  ListName  type  followLink
+#
+2
+elem 1 0
+head 1 1

@@ -1,0 +1,62 @@
+* ********************************************************************
+* Do not touch the following 2 xdef lists:
+* ********************************************************************
+        xdef Start, Stop, End
+        xdef a, b, len_a, len_b, min, max, sum, common
+
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* You can add more xdef here to export labels to EGTAPI
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*      Put your assembler program here - between the start and stop label
+*      DO NOT define any variables here - see the variable section below
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Start:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* ********************************************************************
+* Don't touch the stop label - you need it to stop the program
+* ********************************************************************
+Stop:   nop
+
+
+End:    nop
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*    Variable Section -   Put your variables here
+*
+*    Do not define any of the variables specified in the program
+*    They are already defined below
+*    This section is for any temporary variables you might need
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+* ********************************************************************
+* XXXX Don't touch anything below this line !!!
+* ********************************************************************
+a:      dc.l  1, 2, 3, 4, 5
+b:      dc.l  6, 7, 8, 9, 10, 11 
+len_a: 	equ 5
+len_b:	equ 6
+min:	ds.l 1
+max:	ds.l 1
+sum:	ds.l 1
+common:	ds.l 1
+
+        end

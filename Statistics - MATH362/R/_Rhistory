@@ -1,0 +1,275 @@
+library("plotrix", lib.loc="~/R/win-library/3.1")
+detach("package:plotrix", unload=TRUE)
+n<-10
+theta <- 2
+# Set the number of simulations you want to run
+#   i.e. the number of random samples (each of size n) you want to test
+numsim <- 20
+#numsim <- 100
+# initialize vecters for
+# x - each simulation to be ploted on along the x-axis
+# L/L_clt the Lower bound of the CI
+# U/U_clt the Upper bound of the CI
+x <- 1:numsim
+L<- rep(0,numsim)
+U<- rep(0,numsim)
+T<- rep(0,numsim)
+L_clt<- rep(0,numsim)
+U_clt<- rep(0,numsim)
+T_clt<- rep(0,numsim)
+# for each simulation
+for (i in 1:numsim){
+# draw a random sample of size n from a uniform distribution with parameters a = 0, b = theta
+rs <- runif(n,0,theta)
+# calculate the Lower bound via MLE estimate
+L[i] <- max(rs)
+# calculate the Upper bound via the MLE estimate
+U[i] <- max(rs)/(0.05^(1/n))
+# calculate the center of the interval
+T[i] <- (U[i]+L[i])/2
+# calculate the Lower bound via the CLT
+L_clt[i] <- 2*mean(rs)/(1+1.96/sqrt(3*n))
+# calculate the Upper bound via the CLT
+U_clt[i] <- 2*mean(rs)/(1-1.96/sqrt(3*n))
+# calculate the center of the CLT interval
+T_clt[i] <- (U_clt[i]+L_clt[i])/2
+}
+# plot
+require(plotrix)
+par(mfrow=c(2,1))
+plotCI(x, T, ui=U, li=L)
+abline(theta,0, col="blue")
+title("95% CIs for Uniform(0,2) via MLE")
+plotCI(x, T_clt, ui=U_clt, li=L_clt)
+abline(theta,0, col="blue")
+title("95% CIs for Uniform(0,2) via CLT")
+#########################################
+# Binomial
+#########################################
+# Set random sample size n
+n<-100
+# Set the true value for the parameter
+prob <- 1/2
+# we assumed that this parameter was known in the
+numsim <- n
+x <- 1:numsim
+# initialize vecters for
+# x - each simulation to be ploted on along the x-axis
+# L/L_clt the Lower bound of the CI
+# U/U_clt the Upper bound of the CI
+L_clt<- rep(0,numsim)
+U_clt<- rep(0,numsim)
+p_clt<- rep(0,numsim)
+# for each simulation
+for (i in 1:numsim){
+rs <- rbinom(1, n, prob)
+# calculate the Lower bound via the CLT
+L_clt[i] <- rs/n-1.96*sqrt(rs*(1-rs/n))/n
+# calculate the Upper bound via the CLT
+U_clt[i] <- rs/n+1.96*sqrt(rs*(1-rs/n))/n
+# calculate the center of the CLT interval
+p_clt[i] <- rs/n
+}
+# plot
+par(mfrow=c(1,1))
+plotCI(x, p_clt, ui=U_clt, li=L_clt)
+abline(prob,0, col="blue")
+title("95% CIs for Binomial(n,1/2) via CLT")
+# Enter data
+tw <- c(0.225, 0.262, 0.217, 0.240, 0.230, 0.229, 0.235, 0.217)
+tw <- c(0.225, 0.262, 0.217, 0.240, 0.230, 0.229, 0.235, 0.217)
+qcs <- c(0.209, 0.205, 0.196, 0.210, 0.202, 0.207, 0.224, 0.223, 0.220, 0.201)
+# find the lengths of the data sets
+n <- length(tw)
+m <- length(qcs)
+# calculate the means
+xbar <-mean(tw)
+ybar <- mean(qcs)
+# calculate the pooled variance
+Sp2 <- ((n-1)*sd(tw)^2 +(m-1)*sd(qcs)^2)/(n+m-2)
+# calculate the test statistic
+t <- (xbar-ybar)/sqrt((1/n+1/m)*Sp2)
+# find the critical values
+qt(0.025,16)
+# OR use the R command
+t.test(tw,qcs, var.equal=TRUE, paired = FALSE)
+# Example: Alcoholic Authors/Problem 9.2.6 ###################
+al <- c(48, 66, 71, 65, 56, 67, 67, 70, 77)
+non <- c(65, 87, 32, 77, 89, 86, 77, 84, 64, 88, 90, 67)
+xbar <- mean(al)
+ybar <- mean(non)
+n <- length(al)
+m <- length(non)
+Sp2 <- ((n-1)*sd(al)^2 +(m-1)*sd(non)^2)/(n+m-2)
+t <- (xbar-ybar)/sqrt((1/n+1/m)*Sp2)
+qt(0.05,19)
+t.test(al,non, alternative = "less", var.equal=TRUE, paired = FALSE)
+non2 <- c(65, 87, 77, 89, 86, 77, 84, 64, 88, 90, 67)
+t.test(al,non2, alternative = "less", var.equal=TRUE, paired = FALSE)
+# Look at the Ratio of two chi-squareds
+# Let's take 2000 simulations
+numsim <- 2000
+# Set up the vector to store the result of each simulation
+x.F_sims<- rep(0,numsim)
+# Set the degrees of freedom for the numerator and demoninator
+n=10
+m=15
+# For each simulation
+for (i in 1:numsim){
+num.y <- rchisq(1,m)/(m-1)
+den.x <- rchisq(1,n)/(n-1)
+x.F_sims[i]<- num.y/den.x
+}
+hist(x.F_sims,prob=TRUE)
+# plot the chi-squared distribution over the histogram
+curve( df(x, df1=n, df2 =m), col='blue', add=TRUE)
+al <- c(48, 66, 71, 65, 56, 67, 67, 70, 77)
+non <- c(65, 87, 32, 77, 89, 86, 77, 84, 64, 88, 90, 67)
+xbar <- mean(al)
+ybar <- mean(non)
+n <- length(al)
+m <- length(non)
+sx2 <- sd(al)^2
+sx2
+sy2 <- sd(non)^2
+sy2
+F <- sy2/sx2
+F
+alpha = 0.05
+qf(alpha/2,m-1,n-1)
+qf(1-alpha/2,m-1,n-1)
+var.test(al,non)
+# Example: Pawedness/Problem 9.4.1 #######################################
+# http://www.radiolab.org/story/whats-left-when-youre-right/
+px <- 55/200
+py <- 40/200
+phat <- (55+40)/(200+200)
+z <- (px-py)/sqrt((1/200+1/200)*phat*(1-phat))
+qnorm(0.025)
+x <- c(160, 175, 180, 185, 185, 185, 190, 190, 195, 195, 195 , 200 , 200,
+200, 200, 205, 205, 210, 210, 218, 219, 220, 222, 225 , 225, 232)
+y <- c(155,  155,  160,  160,  160, 166, 170, 175, 175, 175,  180, 185, 185,
+185 , 185 , 185 , 185 ,185 , 190, 190, 190, 190,190, 195, 195, 195,
+195, 200, 205, 207,210,211, 230)
+# (1)
+xbar = mean(x)
+ybar = mean(y)
+n = length(x)
+m = length(y)
+Sp2 <- ((n-1)*sd(x)^2 +(m-1)*sd(y)^2)/(n+m-2)
+tl = qt(0.025,n+m-2)
+t = qt(0.975,n+m-2)
+CI_Lower = xbar -ybar -t*sqrt((1/n+1/m)*Sp2)
+CI_UPer = xbar -ybar +t*sqrt((1/n+1/m)*Sp2)
+#(2)
+x = 15
+n = 59
+# approximate  11% as 11 out of 100
+y = 11
+m=100
+z_alpha = qnorm(0.975)
+CI_Lower = (x/n - y/m) - z_alpha*sqrt((x/n*(1-x/n))/n + (y/m*(1-y/m)/m))
+CI_Upper = (x/n - y/m) + z_alpha*sqrt((x/n*(1-x/n))/n + (y/m*(1-y/m)/m))
+#(3)
+Sx = sd(x)
+Sy = sd(y)
+n = length(x)
+m = length(y)
+alpha = 0.05
+F_l = qf(alpha/2,m-1,n-1)
+F_u = qf(1-alpha/2,m-1,n-1)
+CI_Lower = Sx/Sy*F_l
+CI_Upper = Sx/Sy*F_u
+var.test(x,y)
+x <- c(160, 175, 180, 185, 185, 185, 190, 190, 195, 195, 195 , 200 , 200,
+200, 200, 205, 205, 210, 210, 218, 219, 220, 222, 225 , 225, 232)
+y <- c(155,  155,  160,  160,  160, 166, 170, 175, 175, 175,  180, 185, 185,
+185 , 185 , 185 , 185 ,185 , 190, 190, 190, 190,190, 195, 195, 195,
+195, 200, 205, 207,210,211, 230)
+# (1)
+xbar = mean(x)
+ybar = mean(y)
+n = length(x)
+m = length(y)
+Sp2 <- ((n-1)*sd(x)^2 +(m-1)*sd(y)^2)/(n+m-2)
+tl = qt(0.025,n+m-2)
+t = qt(0.975,n+m-2)
+CI_Lower = xbar -ybar -t*sqrt((1/n+1/m)*Sp2)
+CI_UPer = xbar -ybar +t*sqrt((1/n+1/m)*Sp2)
+#(2)
+x = 15
+n = 59
+# approximate  11% as 11 out of 100
+y = 11
+m=100
+z_alpha = qnorm(0.975)
+CI_Lower = (x/n - y/m) - z_alpha*sqrt((x/n*(1-x/n))/n + (y/m*(1-y/m)/m))
+CI_Upper = (x/n - y/m) + z_alpha*sqrt((x/n*(1-x/n))/n + (y/m*(1-y/m)/m))
+#(3)
+Sx = sd(x)
+Sy = sd(y)
+n = length(x)
+m = length(y)
+alpha = 0.05
+F_l = qf(alpha/2,m-1,n-1)
+F_u = qf(1-alpha/2,m-1,n-1)
+CI_Lower = Sx/Sy*F_l
+CI_Upper = Sx/Sy*F_u
+var.test(x,y)
+? chisq.test
+? t.test
+require(graphics)
+t.test(1:10, y = c(7:20))      # P = .00001855
+t.test(1:10, y = c(7:20, 200)) # P = .1245    -- NOT significant anymore
+## Classical example: Student's sleep data
+plot(extra ~ group, data = sleep)
+## Traditional interface
+with(sleep, t.test(extra[group == 1], extra[group == 2]))
+## Formula interface
+t.test(extra ~ group, data = sleep)
+probs = c(0.393, 0.239, 0.368)
+chisq.test(obs.freq, p=probs)
+c = (45-100*0.393)^2/(100*0.393)+(20-100*0.239)^2/(100*0.239)+(35-100*0.368)^2/(100*0.368)
+obs.freq = c(65,35)
+probs = c(0.632, 0.368)
+chisq.test(obs.freq, p=probs)
+install.packages("MASS")       # load the MASS package
+library("MASS")
+levels(survey$Smoke)
+# we can find the frequency distribution with the table function.
+smoke.freq = table(survey$Smoke)
+smoke.freq
+# Problem:  Suppose the campus smoking statistics is as below.
+# Heavy   Never   Occas   Regul
+#  4.5%   79.5%    8.5%    7.5%
+# Determine whether the sample data in survey supports it at .05 significance level.
+# We save the campus smoking statistics in a variable named smoke.prob.
+# Then we apply the chisq.test function and perform the Chi-Squared test.
+smoke.prob = c(.045, .795, .085, .075)
+chisq.test(smoke.freq, p=smoke.prob)
+# http://www.radiolab.org/story/91699-from-benford-to-erdos/
+# Benfords Law Example
+river <- c(104,55,36,38,24,29,18,14,17)
+p <- 1/9
+n <- 335
+probs <- c(p,p,p,p,p,p,p,p,p)
+expected <- n*probs
+discrep <-river-expected
+d <- sum(discrep^2/expected)
+chisq.test(river, p=probs)
+# P(1st digit is k) = log_10(k+1)-log_10(k)
+ben_probs <- c(log10(1+1)-log10(1), log10(2+1)-log10(2), log10(3+1)-log10(3), log10(4+1)-log10(4),
+log10(5+1)-log10(5), log10(6+1)-log10(6),log10(7+1)-log10(7),log10(8+1)-log10(8),
+log10(9+1)-log10(9))
+sum(ben_probs)
+chisq.test(river, p = ben_probs)
+Singles <- read.table("C:\\Users\\Tamer\\AppData\\Local\\Temp\\Rtmp6X2IBJ\\datad702e317691", header=TRUE, quote="\"")
+View(Singles)
+? exponential
+? exponential.dist
+?? exponential.dist
+? t.test
+? mean
+x <- c(0:10, 50)
+xm <- mean(x)
+c(xm, mean(x, trim = 0.10))
