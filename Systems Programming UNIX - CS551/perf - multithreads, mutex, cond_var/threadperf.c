@@ -177,7 +177,6 @@ To print the perfect numbers in a sorted fashion, I use library function qsort.
 					}
 
 					else if(strcmp(str, "idle") == 0) {
-						pr	
 						scanf("%d", &startNum);
 						if(startNum>idx || startNum==0) {
 							printf("No such thread exists\n");
